@@ -277,10 +277,10 @@ span {
 		width: 150px;
 		height: 150px;
 		background-size: cover;
-		mask-image: url('vest-mask.png');
+		mask-image: url('./vest-mask.png');
 		mask-size: contain;
 		mask-repeat: no-repeat;
-		-webkit-mask-image: url('vest-mask.png');
+		-webkit-mask-image: url('./vest-mask.png');
 		-webkit-mask-size: contain;
 		-webkit-mask-repeat: no-repeat;
 	}
@@ -297,15 +297,23 @@ span {
 	align-items: center;
 	justify-items: center;
 
-	grid-template-columns: min-content repeat(2, auto);
+	@media screen and (min-width: 769px) {
+		grid-template-columns: min-content repeat(2, auto);
+	}
 
 	.title {
 		display: grid;
 		gap: $gap;
 		width: 100%;
 
-		grid-column: 1 / span 2;
-		grid-row: 1;
+		@media screen and (min-width: 769px) {
+			grid-column: 1 / span 2;
+			grid-row: 1;
+		}
+
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
 
 		.stock {
 			display: none;
@@ -313,43 +321,53 @@ span {
 	}
 
 	.order-id {
-		grid-column: 3;
-		grid-row: 1;
-		justify-self: right;
+		@media screen and (min-width: 769px) {
+			grid-column: 3;
+			grid-row: 1;
+			justify-self: right;
+		}
 	}
 
 	img {
 		display: block;
 		border-radius: $radius;
 
-		grid-column: 1;
-		grid-row: 2 / span 2;
+		@media screen and (min-width: 769px) {
+			grid-column: 1;
+			grid-row: 2 / span 2;
+		}
 
 		width: 150px;
 		height: 150px;
 		background-size: cover;
-		mask-image: url('vest-mask.png');
+		mask-image: url('./vest-mask.png');
 		mask-size: contain;
 		mask-repeat: no-repeat;
-		-webkit-mask-image: url('vest-mask.png');
+		-webkit-mask-image: url('./vest-mask.png');
 		-webkit-mask-size: contain;
 		-webkit-mask-repeat: no-repeat;
 	}
 
 	.price {
-		grid-column: 2;
-		grid-row: 3;
+		@media screen and (min-width: 769px) {
+			grid-column: 2;
+			grid-row: 3;
+		}
 	}
 
 	.description {
-		grid-column: 2;
-		grid-row: 2;
+		@media screen and (min-width: 769px) {
+			grid-column: 2;
+			grid-row: 2;
+		}
 	}
 
 	.button.buy {
-		grid-column: 3;
-		grid-row: 2 / span 2;
-		justify-self: right;
+		@media screen and (min-width: 769px) {
+			grid-column: 3;
+			grid-row: 2 / span 2;
+			justify-self: right;
+		}
 	}
 }
 
