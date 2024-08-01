@@ -685,7 +685,9 @@ function Products() {
 							description={description}
 							price={price}
 							stock={stock}
-							imageUrl={`${Math.floor(Math.random() * 3) + 1}.png`}
+							imageUrl={`https://layout-html-css.slogive.com/${
+								Math.floor(Math.random() * 3) + 1
+							}.png`}
 							key={id}
 						/>
 					))}
@@ -708,7 +710,9 @@ function Sells() {
 							title={title}
 							description={description}
 							price={price}
-							imageUrl={`${Math.floor(Math.random() * 3) + 1}.png`}
+							imageUrl={`https://layout-html-css.slogive.com/${
+								Math.floor(Math.random() * 3) + 1
+							}.png`}
 							key={id}
 						/>
 					))}
@@ -731,7 +735,9 @@ function Orders() {
 							title={title}
 							description={description}
 							price={price}
-							imageUrl={`${Math.floor(Math.random() * 3) + 1}.png`}
+							imageUrl={`https://layout-html-css.slogive.com/${
+								Math.floor(Math.random() * 3) + 1
+							}.png`}
 							key={id}
 						/>
 					))}
